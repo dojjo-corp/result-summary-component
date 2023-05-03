@@ -6,6 +6,9 @@ body {
 }
 
 .wrapper {
+	background-color: white!important;
+	border-radius: 30px;
+	box-shadow: 0px 3px 5px rgb(0,0,0,0.08);
 	display: inline-grid;
 	grid-template-columns: 1fr 1fr;
 	text-align: center;
@@ -16,6 +19,7 @@ body {
 	margin: 40px 0;
 }
 
+/* RESULT SECTION */
 .result-container {
 	background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 	border-radius: 30px;
@@ -37,7 +41,7 @@ body {
 
 .percentage-top {
 	color: #fff;
-	font-size: 76px;
+	font-size: 4em;
 	font-weight: bold;
 	padding: 20% 0 0;
 	margin: 0;
@@ -54,9 +58,9 @@ body {
 	padding: 0 60px 40px;
 }
 
-/***********************RESULT SECTION*****************/
+/***********************SUMMARY SECTION*****************/
 .summary-container {
-	display: grid;
+	display: inline-grid;
 	padding: 0 50px;
 }
 
@@ -83,27 +87,27 @@ body {
 }
 
 .numerator {
-	color: #000;
+	color: #202020;
 }
 
 .reaction {
 	background-color: hsla(0, 100%, 50%, 0.07);
-	color: #ff4040;
+	color: #ff8080;
 }
 
 .memory {
 	background-color: hsla(44.933, 87.451%, 50%, 0.07);
-	color: #efb710;
+	color: #f3c94c;
 }
 
 .verbal {
 	background-color: hsla(120, 100%, 25.098%, 0.07);
-	color: #00df36;
+	color: #20ff56;
 }
 
 .visual {
 	background-color: hsl(246.81, 100%, 31.25%, 0.07);
-	color: #0000ff;
+	color: #4040ff;
 }
 
 .btn-lg {
@@ -114,4 +118,43 @@ body {
 	padding: 20px 0 20px;
 	text-decoration: none;
 	display: block;
+}
+
+/* ATTRIBUTE SECTION */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* MOBILE DEVICES */
+@media screen and (max-width: 375px) {
+	body {
+		font-size: 4vw;
+		margin: 0!important;
+	}
+	.wrapper {
+		box-shadow: none;
+		display: inline;
+		padding: 0;
+		margin: 0 0 30px;
+	}
+	.result-container{
+		border-radius: 0 0 30px 30px;
+		width: 100vw;
+	}
+	.result-container h3 {
+		margin: 25px auto 0;
+	}
+	.percentage {
+		width: 40vw;
+		height: 40vw;
+		margin: 20px auto;
+	}
+	.summary-container{
+		margin-bottom: 40px;
+		padding: 0 30px;
+		row-gap: 20px;
+	}
+	.comment-top {
+		margin: 15px auto!important;
+	}
 }
